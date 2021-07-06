@@ -1,0 +1,1 @@
+export const HOST_SERVER:string = 'abc'
