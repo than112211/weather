@@ -1,0 +1,84 @@
+@import '../../styles/common/base';
+@import '../../styles/common/variables';
+
+.search {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(-200%);
+    transition: .6s ease;
+    background-color: $color-bg-second;
+    z-index: 1;
+    padding: 2rem;
+    &__close{
+        text-align: end;
+        svg{
+            color: $color-text-white;
+            font-size: $size-text-l;
+        }
+    }
+    &__input{
+        @include displayFlex(space-between,center);
+        margin-top: 2rem;
+        &-text {
+            width: 70%;
+            @include displayFlex(start,center);
+            border: 1px solid $color-text-white;
+            padding: .2rem .6rem;
+            svg {
+                color: $color-text-white;
+                margin-right: .4rem;
+            }
+            input {
+                width: 70%;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: $color-text-grey;
+                &::placeholder {
+                    font-size: $size-text-s;
+                }
+            }
+        }
+    }
+    &__result{
+        color: $color-text-white;
+        margin-top: 2rem;
+        overflow-y: scroll;
+        height: 80%;
+        &::-webkit-scrollbar {
+            width: 16px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+            border-radius: 10px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            box-shadow: inset 0 0 6px $color-text-white; 
+        }
+        &-item {
+            @include displayFlex(space-between,center);
+            padding: .6rem;
+            margin-bottom: 1rem;
+            &:hover {
+                border: 1px solid $color-text-grey;
+                svg{
+                    display: block;
+                }
+            }
+            svg {
+                display: none;
+            }
+            h1{
+                font-size: $size-text-m;
+                font-weight: 300;
+                margin: 0;
+            }
+        }
+    }
+}

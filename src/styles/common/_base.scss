@@ -1,0 +1,15 @@
+@mixin displayFlex($justify,$align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin circle($w,$h,$bgColor){
+    width: $w;
+    height: $h;
+    background-color: $bgColor;
+    border-radius: 50%;
+}
+@mixin w-h($w,$h){
+    width: $w;
+    height: $h;
+}

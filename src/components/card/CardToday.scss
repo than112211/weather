@@ -1,0 +1,22 @@
+@import '../../styles/common/base';
+@import '../../styles/common/variables';
+
+.card__today {
+    width: 100%;
+    background-color: $color-bg-second;
+    padding: 2rem;
+    color: $color-text-white;
+    margin-bottom: 1.2rem;
+    h1 {
+        text-align: center;
+    }
+    p{
+        font-size: $size-text-xxl;
+        text-align: center;
+        span {
+            font-size: $size-text-m;
+            display: inline-block;
+            margin-left: .2rem;
+        }
+    }
+}

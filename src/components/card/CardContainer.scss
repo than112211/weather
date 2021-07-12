@@ -1,0 +1,39 @@
+@import '../../styles/common/base';
+@import '../../styles/common/variables';
+
+.card__container{
+    width: 100%;
+    background-color: $color-bg-second;
+    padding: 1rem;
+    color: $color-text-white;
+    h1{
+        font-size: $size-text-l;
+        text-align: center;
+    }
+    img {
+        display: block;
+        width: 50%;
+        margin: 1rem auto;
+    }
+    &-celsius {
+        @include displayFlex(space-between,center);
+        p{
+            position: relative;
+            font-size: $size-text-l;
+            &:nth-child(2){
+                color: $color-text-grey;
+            }
+            span{
+                &:nth-child(1){
+                    position: absolute;
+                    top: 0;
+                    font-size: $size-text-s;
+                }
+                &:nth-child(2){
+                    margin-left: .6rem;
+                    font-size: $size-text-m;
+                }
+            }
+        }
+    }
+}
