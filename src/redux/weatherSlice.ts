@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction,StateFromReducersMapObject } from '@reduxjs/toolkit';
 import { WoeID } from 'saga/weather';
 import { RootState } from '../app/store';
 
@@ -34,7 +34,8 @@ export interface Weather {
     woeid: number,
 }
 
-const innitWeather: Weather = {
+// Khởi tạo state cần generic 
+const initialState: Weather= {
     consolidated_weather: [],
     latt_long: "",
     location_type: "",
@@ -51,7 +52,7 @@ const innitWeather: Weather = {
 
 export const weatherSlice = createSlice({
   name: 'weather',
-  initialState : innitWeather,
+  initialState ,
   reducers: {
     getWeather: (state,action: PayloadAction<WoeID>) => {
 

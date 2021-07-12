@@ -112,18 +112,19 @@ const MainPage:React.FC = () => {
                 </div>
                 <div className="row weather__highlight">
                     <h1>Today's Highlight</h1>
-                    <div className="col-sm-6">
+                    <div className="col-3 col-sm-3">
                         <CardToday title="Wind" number={weather?.consolidated_weather[0]?.wind_speed} unit="mph"></CardToday>
                     </div>
-                    <div className="col-sm-6">
+                    <div className="col-3 col-sm-3">
                         <CardToday title="Humidity" number={weather?.consolidated_weather[0]?.humidity} unit="%"></CardToday>
                     </div>
-                    <div className="col-sm-6">
+                    <div className="col-3 col-sm-3">
                         <CardToday title="Visibility" number={weather?.consolidated_weather[0]?.visibility} unit="miles"></CardToday>
                     </div>
-                    <div className="col-sm-6">
-                        <CardToday title="Air pressusre" number={weather?.consolidated_weather[0]?.air_pressure} unit="mb"></CardToday>
+                    <div className="col-3 col-sm-3">
+                        <CardToday title="AirPressure" number={weather?.consolidated_weather[0]?.air_pressure} unit="mb"></CardToday>
                     </div>
+                    <p className="note__personal">Created by Than - https://github.com/than112211/weather</p>
                 </div>  
             </div>
         </div>

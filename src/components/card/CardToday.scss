@@ -2,7 +2,7 @@
 @import '../../styles/common/variables';
 
 .card__today {
-    width: 100%;
+    @include w-h(100%,100%);    
     background-color: $color-bg-second;
     padding: 2rem;
     color: $color-text-white;

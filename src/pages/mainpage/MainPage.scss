@@ -116,7 +116,7 @@
     &__right {
         width: 85%;
         background-color: $color-bg-main;
-        padding: 2rem 6rem;
+        padding: 4rem 6rem;
         .weather__list{
             @include displayFlex(center,center)
         }
@@ -125,7 +125,13 @@
             h1{
                 color: $color-text-white;
                 font-size: $size-text-xxl;
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
+            }
+            .note__personal{
+                font-size: $size-text-s;
+                color: $color-text-white;
+                text-align: center;
+                margin-top: 4rem;
             }
         }
     }
